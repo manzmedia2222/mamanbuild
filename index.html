@@ -1,171 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#101827">
-<title>Web2App Studio — Hijrah Abdur Rahman</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1220">
+<title>Web2App Studio</title>
 <style>
-:root{--bg:#0b1120;--panel:#111c2e;--panel2:#16243a;--line:#26364e;--text:#edf4ff;--muted:#93a4bd;--accent:#7c9cff;--accent2:#54d6bd;--danger:#ff7777;--radius:18px}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#1c3152 0,transparent 38%),var(--bg);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial}
-button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{max-width:1180px;margin:auto;padding:24px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}.brand{display:flex;align-items:center;gap:12px}.logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#071321;font-weight:900;font-size:19px}.brand b{display:block;font-size:17px}.brand small,.muted{color:var(--muted)}.top a{color:#c7d6ff;text-decoration:none;font-size:13px}.hero{margin:20px 0 26px}.eyebrow{color:var(--accent2);font-weight:700;font-size:12px;letter-spacing:.13em;text-transform:uppercase}.hero h1{font-size:clamp(28px,5vw,43px);line-height:1.12;margin:9px 0}.hero p{color:var(--muted);max-width:700px;margin:0}.grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:18px;align-items:start}.card{background:linear-gradient(180deg,rgba(22,36,58,.96),rgba(17,28,46,.98));border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:0 16px 45px #0002}.card h2{font-size:17px;margin:0 0 4px}.sub{color:var(--muted);font-size:13px;margin:0 0 18px}.section{padding-top:17px;margin-top:17px;border-top:1px solid var(--line)}.field{margin:13px 0}.field label{display:block;font-size:13px;font-weight:650;margin-bottom:7px}.field input,.field select,.field textarea{width:100%;background:#0c1627;border:1px solid #30425d;color:var(--text);border-radius:11px;padding:12px 13px;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px #7c9cff20}.hint{font-size:11px;color:var(--muted);margin-top:6px}.tabs{display:flex;gap:8px;flex-wrap:wrap}.tab{border:1px solid var(--line);background:#0c1627;color:var(--muted);padding:9px 12px;border-radius:10px}.tab.active{color:#fff;border-color:var(--accent);background:#263a60}.drop{border:1px dashed #526987;background:#0c1627;border-radius:13px;padding:18px;text-align:center}.drop input{max-width:100%;margin-top:8px}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.btn{border:0;border-radius:11px;padding:12px 16px;font-weight:750;background:linear-gradient(135deg,var(--accent),#9c8bff);color:#091426}.btn.secondary{background:#22334d;color:var(--text);border:1px solid var(--line)}.btn:disabled{opacity:.5;cursor:not-allowed}.btn.full{width:100%;margin-top:8px}.notice{border:1px solid #39506e;background:#102039;border-radius:12px;padding:12px;color:#c5d6f1;font-size:12px}.preview{background:#080e19;border:1px solid var(--line);border-radius:15px;padding:15px}.phone{width:180px;height:330px;margin:12px auto;border:7px solid #303d52;border-radius:28px;background:#f5f7fb;color:#142033;overflow:hidden;box-shadow:0 15px 35px #0006;display:flex;flex-direction:column}.phonebar{height:22px;background:#e4e9f2;font-size:9px;padding:3px 10px;display:flex;justify-content:space-between}.screen{padding:18px 12px;text-align:center;flex:1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px}.appicon{width:56px;height:56px;border-radius:14px;object-fit:cover;background:#dce5f3}.screen strong{font-size:13px}.screen small{font-size:9px;color:#65748b}.wm{font-size:11px;color:var(--muted);text-align:center;margin-top:18px}.wm a{color:#b7c9ff;text-decoration:none}.status{font-size:12px;color:var(--muted);margin-top:10px;min-height:18px}.authbox{background:#0c1627;border:1px solid var(--line);padding:13px;border-radius:13px;margin-top:12px}.authbox h3{font-size:14px;margin:0 0 7px}.auth-actions{display:flex;gap:8px;flex-wrap:wrap}.auth-actions button{flex:1;min-width:130px}.pill{display:inline-block;border-radius:999px;padding:4px 9px;background:#183b3a;color:#91f1d9;font-size:11px;font-weight:700}.footer{margin:25px 0 5px;text-align:center;color:var(--muted);font-size:12px}.hidden{display:none!important}
-@media(max-width:820px){.grid{grid-template-columns:1fr}.wrap{padding:16px}.top{align-items:flex-start}.row{grid-template-columns:1fr}.card{padding:16px}.hero{margin-top:12px}}
+:root{--bg:#0b1220;--surface:#111c2d;--surface2:#17253a;--line:#263851;--text:#f3f6fc;--muted:#9aabc2;--brand:#7c9cff;--mint:#5ee0c1;--gold:#e8c77b;--danger:#ff8585;--r:18px}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(900px 450px at 15% -10%,#20395d 0,transparent 65%),var(--bg);color:var(--text);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+button,input,select{font:inherit}button{cursor:pointer}.shell{max-width:1200px;margin:auto;padding:24px}.top{display:flex;justify-content:space-between;align-items:center;gap:15px}.brand{display:flex;gap:12px;align-items:center}.brandmark{width:44px;height:44px;border-radius:14px;background:linear-gradient(140deg,var(--brand),var(--mint));display:grid;place-items:center;color:#081426;font-weight:950;font-size:20px}.brand strong{display:block;font-size:16px}.brand small{color:var(--muted);font-size:12px}.top a{color:#c5d5ff;text-decoration:none;font-size:13px}.hero{padding:44px 0 27px}.tag{font-size:11px;letter-spacing:.16em;color:var(--mint);font-weight:800;text-transform:uppercase}.hero h1{font-size:clamp(32px,5vw,54px);letter-spacing:-.04em;line-height:1.04;margin:10px 0 14px}.hero p{max-width:720px;color:var(--muted);margin:0}.layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr);gap:20px;align-items:start}.panel{background:linear-gradient(160deg,#142239,#101a2a);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:0 22px 60px #0002}.panel+.panel{margin-top:18px}.heading{display:flex;justify-content:space-between;align-items:center;gap:10px}.heading h2{font-size:17px;margin:0}.muted{color:var(--muted)}.desc{font-size:12px;color:var(--muted);margin:5px 0 18px}.step{display:inline-grid;place-items:center;width:25px;height:25px;border-radius:8px;background:#263b5c;color:#cbd9ff;font-size:12px;font-weight:800;margin-right:8px}.group{padding-top:19px;margin-top:19px;border-top:1px solid var(--line)}.group h3{font-size:14px;margin:0 0 13px}.field{margin:13px 0}.field label{display:block;font-size:12px;font-weight:750;margin-bottom:7px;color:#dbe5f4}.field input,.field select{width:100%;padding:12px 13px;border-radius:11px;background:#0a1423;border:1px solid #30445f;color:var(--text);outline:none}.field input:focus,.field select:focus{border-color:var(--brand);box-shadow:0 0 0 3px #7c9cff20}.hint{font-size:11px;color:var(--muted);margin-top:6px}.seg{display:flex;gap:8px;flex-wrap:wrap}.seg button{padding:9px 13px;border:1px solid var(--line);border-radius:10px;background:#0b1626;color:var(--muted);font-size:12px;font-weight:700}.seg button.active{background:#263b5e;border-color:#7998e9;color:white}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.drop{border:1px dashed #506987;border-radius:13px;padding:17px;text-align:center;background:#0c1727}.drop input{max-width:100%;margin-top:9px}.btn{border:0;border-radius:11px;padding:12px 16px;background:linear-gradient(120deg,var(--brand),#a797ff);color:#071326;font-weight:850}.btn.secondary{background:#20324b;border:1px solid #344b69;color:#eaf0fb}.btn:disabled{opacity:.5;cursor:not-allowed}.btn.full{width:100%}.previewbox{background:#0a1321;border:1px solid var(--line);border-radius:15px;padding:15px}.phone{height:360px;width:195px;margin:16px auto 8px;border:7px solid #3b4960;border-radius:29px;background:#f4f6fa;color:#172337;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 16px 35px #0006}.phonebar{height:22px;background:#e8edf5;font-size:9px;padding:3px 10px;display:flex;justify-content:space-between}.phonescreen{flex:1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:9px;padding:12px;text-align:center}.appicon{width:64px;height:64px;object-fit:cover;border-radius:16px;background:#dbe5f4}.phonescreen b{font-size:14px}.phonescreen small{font-size:10px;color:#6c7b91;overflow-wrap:anywhere}.pill{font-size:10px;padding:4px 8px;border-radius:99px;background:#173d39;color:#8af0d6;font-weight:800}.callout{padding:13px;border-radius:12px;border:1px solid #395477;background:#12243b;color:#cbdaf0;font-size:12px}.callout strong{color:white}.status{font-size:12px;min-height:20px;color:var(--mint);margin-top:9px;overflow-wrap:anywhere}.auth{background:#0b1626;border:1px solid var(--line);border-radius:13px;padding:13px;margin-top:12px}.auth h4{margin:0 0 8px;font-size:13px}.auth .field{margin:8px 0}.auth .btn{font-size:12px;padding:10px}.watermark{margin-top:22px;text-align:center;color:#8496b0;font-size:11px}.watermark a{color:#c3d3ff;text-decoration:none}.footer{text-align:center;color:#71839c;font-size:11px;padding:25px 0}.hidden{display:none!important}
+@media(max-width:850px){.shell{padding:15px}.layout{grid-template-columns:1fr}.hero{padding:35px 0 22px}.panel{padding:17px}.top{align-items:flex-start}.two{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="shell">
 <header class="top">
-  <div class="brand"><div class="logo">W</div><div><b>Web2App Studio</b><small>Website to Android App Builder</small></div></div>
-  <a href="https://hijrah-abdur-rahman-portofolio.vercel.app" target="_blank" rel="noopener">Portofolio pembuat ↗</a>
+ <div class="brand"><div class="brandmark">W</div><div><strong>Web2App Studio</strong><small>Android application builder</small></div></div>
+ <a href="https://hijrah-abdur-rahman-portofolio.vercel.app" target="_blank" rel="noopener">Hijrah Abdur Rahman ↗</a>
 </header>
-<section class="hero">
-  <div class="eyebrow">Build your mobile app</div>
-  <h1>Ubah website menjadi<br>aplikasi Android.</h1>
-  <p>Masukkan URL, unggah index.html, atau ZIP website. Atur nama dan ikon aplikasi, lalu hubungkan ke layanan build untuk menghasilkan APK/AAB.</p>
-</section>
+<section class="hero"><div class="tag">Build once · Launch on Android</div><h1>Website kamu,<br>jadi aplikasi Android.</h1><p>Siapkan aplikasi Android dari website URL, file HTML, atau ZIP. Atur identitas aplikasi, ikon ImgBB, dan konfigurasi build dalam satu alur yang sederhana.</p></section>
 
-<div class="grid">
-<main class="card">
-  <h2>Konfigurasi aplikasi</h2><p class="sub">Lengkapi sumber website dan identitas aplikasi.</p>
-  <div class="field"><label>Sumber website</label>
-    <div class="tabs">
-      <button class="tab active" data-mode="url">URL Website</button>
-      <button class="tab" data-mode="html">File HTML</button>
-      <button class="tab" data-mode="zip">File ZIP</button>
-    </div>
-  </div>
-  <div id="urlSource" class="field"><label>URL website</label><input id="siteUrl" type="url" placeholder="https://contohwebsite.com"><div class="hint">Gunakan alamat HTTPS yang bisa dibuka publik.</div></div>
-  <div id="fileSource" class="field hidden"><label id="fileLabel">Pilih file</label><div class="drop">Pilih file website dari perangkat<input id="siteFile" type="file" accept=".html,.htm"></div><div class="hint" id="fileHint">Untuk website multi-file, gunakan ZIP dengan index.html di root.</div></div>
+<div class="layout">
+<main class="panel">
+ <div class="heading"><h2><span class="step">01</span>Sumber website</h2><span class="pill">PROJECT SETUP</span></div>
+ <p class="desc">Pilih sumber konten yang akan dimuat di dalam aplikasi.</p>
+ <div class="seg" id="sourceTabs"><button class="active" data-mode="url">URL WEBSITE</button><button data-mode="html">INDEX.HTML</button><button data-mode="zip">FILE ZIP</button></div>
+ <div class="field" id="urlField"><label>Alamat website (HTTPS)</label><input id="websiteUrl" type="url" placeholder="https://websitekamu.com"><div class="hint">Untuk URL, aplikasi memakai WebView yang membuka alamat website tersebut.</div></div>
+ <div class="field hidden" id="fileField"><label id="fileTitle">Pilih file</label><div class="drop">Pilih file dari perangkat<br><input id="websiteFile" type="file" accept=".html,.htm"></div><div class="hint" id="fileHint">Pastikan index.html menjadi file utama.</div></div>
 
-  <div class="section"><h2>Identitas aplikasi</h2>
-    <div class="field"><label>Nama aplikasi</label><input id="appName" maxlength="40" placeholder="Contoh: Aplikasi Saya" value="Aplikasi Saya"></div>
-    <div class="row">
-      <div class="field"><label>Package name</label><input id="packageName" value="com.hijrah.aplikasi" placeholder="com.nama.aplikasi"></div>
-      <div class="field"><label>Versi</label><input id="appVersion" value="1.0.0" placeholder="1.0.0"></div>
-    </div>
-    <div class="field"><label>Ikon aplikasi — link ImgBB / kode HTML ImgBB</label><input id="iconInput" placeholder="https://i.ibb.co/.../icon.png atau <img src=...>"><div class="hint">Tempel direct image URL atau kode embed HTML ImgBB. Ikon persegi PNG disarankan.</div></div>
-    <div class="field"><label>Preview ikon</label><div style="display:flex;align-items:center;gap:12px"><img id="iconPreview" class="appicon" alt="Preview ikon" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Crect width='80' height='80' rx='18' fill='%237c9cff'/%3E%3Ctext x='50%25' y='57%25' font-size='35' text-anchor='middle' fill='%230b1120' font-family='Arial'%3EA%3C/text%3E%3C/svg%3E"><span class="muted" style="font-size:12px">Ikon yang akan dipakai sebagai launcher icon.</span></div></div>
-  </div>
+ <div class="group"><h3><span class="step">02</span>Identitas aplikasi</h3>
+  <div class="field"><label>Nama aplikasi</label><input id="appName" maxlength="40" value="Aplikasi Saya" placeholder="Nama aplikasi"></div>
+  <div class="two"><div class="field"><label>Package ID</label><input id="packageId" value="com.hijrah.aplikasi" placeholder="com.nama.aplikasi"></div><div class="field"><label>Versi aplikasi</label><input id="version" value="1.0.0" placeholder="1.0.0"></div></div>
+  <div class="field"><label>Ikon aplikasi — URL / kode embed ImgBB</label><input id="iconUrl" placeholder="https://i.ibb.co/.../icon.png atau <img src=...>"><div class="hint">Tempel direct link gambar ImgBB atau kode HTML embed. Sistem mengambil URL dari atribut src.</div></div>
+  <div class="field"><label>Warna utama aplikasi</label><input id="theme" type="color" value="#0b1220" style="height:43px;padding:4px"></div>
+ </div>
 
-  <div class="section"><h2>Pengaturan tampilan</h2>
-    <div class="row">
-      <div class="field"><label>Orientasi</label><select id="orientation"><option value="portrait">Portrait</option><option value="landscape">Landscape</option><option value="auto">Mengikuti perangkat</option></select></div>
-      <div class="field"><label>Mode tampilan</label><select id="displayMode"><option value="fullscreen">Fullscreen</option><option value="normal">Dengan status bar</option></select></div>
-    </div>
-    <div class="field"><label>Warna tema</label><input id="themeColor" type="color" value="#101827" style="height:44px;padding:5px"></div>
-  </div>
-  <div class="section"><h2>Build Android</h2><p class="sub">Hubungkan endpoint backend build Android milikmu.</p>
-    <div class="field"><label>Build API endpoint</label><input id="buildEndpoint" type="url" placeholder="https://server-kamu.com/api/build"><div class="hint">Backend harus menerima konfigurasi dan file, lalu mengembalikan URL unduhan APK/AAB.</div></div>
-    <div class="row"><button class="btn secondary" id="previewBtn" type="button">Perbarui preview</button><button class="btn" id="buildBtn" type="button">Build aplikasi</button></div>
-    <div id="buildStatus" class="status" role="status"></div>
-  </div>
-  <div class="notice" style="margin-top:16px">Catatan: file HTML ini adalah antarmuka builder. Kompilasi APK/AAB tetap memerlukan backend Android build. Website satu file di browser tidak dapat mengompilasi dan menandatangani paket Android sendiri.</div>
+ <div class="group"><h3><span class="step">03</span>Pengaturan Android</h3>
+  <div class="two"><div class="field"><label>Orientasi layar</label><select id="orientation"><option value="portrait">Portrait</option><option value="landscape">Landscape</option><option value="any">Otomatis</option></select></div><div class="field"><label>Tampilan</label><select id="display"><option value="fullscreen">Fullscreen</option><option value="default">Dengan status bar</option></select></div></div>
+  <div class="field"><label>Mode navigasi</label><select id="backMode"><option value="webview">Tombol kembali mengikuti riwayat website</option><option value="exit">Tombol kembali keluar jika di halaman awal</option></select></div>
+ </div>
+
+ <div class="group"><h3><span class="step">04</span>Ekspor & build APK</h3>
+  <div class="callout"><strong>Alur build:</strong> Studio membuat project Android Capacitor yang siap dibuild. Project ZIP berisi konfigurasi dan GitHub Actions untuk membangun APK debug secara otomatis setelah kamu upload ke repository GitHub.</div>
+  <div class="field"><label>Link ikon ImgBB dipakai sebagai ikon launcher</label><div class="hint">Gunakan URL gambar publik yang dapat diakses server build. Disarankan PNG 1024 × 1024.</div></div>
+  <button class="btn full" id="exportBtn">Siapkan project APK</button>
+  <button class="btn secondary full" id="configBtn" style="margin-top:9px">Unduh konfigurasi JSON</button>
+  <div class="status" id="buildStatus" role="status"></div>
+ </div>
 </main>
 
 <aside>
-  <div class="card">
-    <h2>Live preview</h2><p class="sub">Pratinjau identitas aplikasi di layar ponsel.</p>
-    <div class="preview"><div style="display:flex;justify-content:space-between"><span class="muted" style="font-size:11px">ANDROID PREVIEW</span><span class="pill">LIVE</span></div>
-      <div class="phone"><div class="phonebar"><span>9:41</span><span>● ● ▰</span></div><div class="screen"><img id="phoneIcon" class="appicon" alt="Ikon aplikasi"><strong id="phoneName">Aplikasi Saya</strong><small id="phoneVersion">Versi 1.0.0</small><small id="phoneSource">Website kamu</small></div></div>
-    </div>
-  </div>
-  <div class="card" style="margin-top:18px">
-    <h2>Login & autentikasi</h2><p class="sub">Integrasi Firebase Authentication: Google, email/password, dan GitHub.</p>
-    <div class="notice">Login ini untuk akun pengguna builder. Isi konfigurasi Firebase milikmu agar autentikasi aktif. Provider sosial juga harus diaktifkan di Firebase Console.</div>
-    <div class="field"><label>Firebase API key</label><input id="fbApiKey" placeholder="AIza..."></div>
-    <div class="field"><label>Auth domain</label><input id="fbAuthDomain" placeholder="project-id.firebaseapp.com"></div>
-    <div class="field"><label>Project ID</label><input id="fbProjectId" placeholder="project-id"></div>
-    <div class="field"><label>App ID</label><input id="fbAppId" placeholder="1:123456:web:abcdef"></div>
-    <button class="btn secondary full" id="initFirebase" type="button">Hubungkan Firebase</button>
-    <div class="authbox"><h3>Google</h3><button class="btn full" id="googleLogin" type="button">Lanjutkan dengan Google</button></div>
-    <div class="authbox"><h3>Email & password</h3>
-      <div class="field"><input id="authEmail" type="email" placeholder="Alamat email"></div>
-      <div class="field"><input id="authPassword" type="password" placeholder="Password (minimal 6 karakter)"></div>
-      <div class="auth-actions"><button class="btn secondary" id="emailLogin" type="button">Masuk</button><button class="btn secondary" id="emailRegister" type="button">Daftar</button></div>
-    </div>
-    <div class="authbox"><h3>GitHub</h3><button class="btn secondary full" id="githubLogin" type="button">Lanjutkan dengan GitHub</button></div>
-    <div id="authStatus" class="status" role="status">Firebase belum dikonfigurasi.</div>
-    <button class="btn secondary full hidden" id="logoutBtn" type="button">Keluar</button>
-  </div>
-  <div class="footer">Dibuat oleh <a href="https://hijrah-abdur-rahman-portofolio.vercel.app" target="_blank" rel="noopener" style="color:#b7c9ff;text-decoration:none">Hijrah Abdur Rahman</a></div>
+ <section class="panel"><div class="heading"><h2>Preview aplikasi</h2><span class="pill">LIVE</span></div><p class="desc">Pratinjau nama dan ikon launcher.</p>
+  <div class="previewbox"><div style="display:flex;justify-content:space-between;color:#91a2ba;font-size:10px"><span>ANDROID DEVICE</span><span>9:41</span></div><div class="phone"><div class="phonebar"><span>9:41</span><span>● ● ▰</span></div><div class="phonescreen"><img id="previewIcon" class="appicon" alt="Ikon aplikasi"><b id="previewName">Aplikasi Saya</b><small id="previewId">com.hijrah.aplikasi</small><small>Android application</small></div></div></div>
+  <div class="watermark">Website builder oleh <a href="https://hijrah-abdur-rahman-portofolio.vercel.app" target="_blank" rel="noopener">Hijrah Abdur Rahman</a></div>
+ </section>
+
+ <section class="panel"><h2>Dukungan login aplikasi</h2><p class="desc">Pengaturan kompatibilitas autentikasi untuk website yang akan dijadikan APK.</p>
+  <div class="callout"><strong>Login yang ditargetkan:</strong> Google, email/password, GitHub, dan provider OAuth lain yang sudah dipasang pada website sumber.</div>
+  <div class="field"><label>Skema deep link aplikasi (opsional)</label><input id="deepLinkScheme" value="web2app" placeholder="contoh: nam aplikasi tanpa spasi"><div class="hint">Dipakai sebagai alamat kembali dari browser ke aplikasi. Website/provider OAuth juga harus dikonfigurasi memakai alamat ini agar login eksternal dapat kembali ke APK.</div></div>
+  <div class="field"><label>Metode autentikasi pada website</label><select id="authMode"><option value="web">Login website biasa (email/password dan session/cookie)</option><option value="oauth">Website memakai Google/GitHub/OAuth</option><option value="firebase">Website memakai Firebase Authentication</option><option value="mixed">Gabungan beberapa metode</option></select></div>
+  <div class="callout">APK akan menyertakan dukungan cookie, navigasi web, dan penanganan tautan aplikasi. Login Google/OAuth tidak bisa dipaksakan hanya dari pembungkus APK: website sumber dan provider harus mengizinkan alur browser/deep link. Jika website memakai Firebase, konfigurasi Firebase dan domain OAuth tetap harus benar.</div>
+ </section>
+ <section class="panel"><h2>Yang perlu diketahui</h2><p class="desc">Tentang hasil project dan APK.</p>
+  <ul class="muted" style="font-size:12px;padding-left:18px;margin-bottom:0"><li>Browser tidak dapat mengompilasi APK sendiri. File ini menyiapkan project dan workflow cloud build.</li><li>Workflow membuat APK debug secara otomatis setelah project tersedia di repository GitHub.</li><li>Email/password dan session website biasanya berjalan di WebView; Google/OAuth memerlukan konfigurasi provider dan deep link yang cocok.</li><li>APK debug untuk uji coba. Distribusi publik memerlukan signing release key.</li></ul>
+ </section>
 </aside>
 </div>
-<footer class="footer">Web2App Studio · Antarmuka builder tanpa watermark pada aplikasi hasil build.</footer>
+<div class="footer">Web2App Studio · Website builder watermark: Hijrah Abdur Rahman · Tidak menambahkan watermark ke aplikasi hasil build.</div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
-import { getAuth, GoogleAuthProvider, GithubAuthProvider, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
-
-const $ = id => document.getElementById(id);
-let mode = "url", selectedFile = null, auth = null;
-const status = (message, error=false) => { $("buildStatus").textContent=message; $("buildStatus").style.color=error?"#ff9999":"#9ee9d7"; };
-const authStatus = (message,error=false) => { $("authStatus").textContent=message; $("authStatus").style.color=error?"#ff9999":"#9ee9d7"; };
-function extractImgUrl(raw){
-  const s=(raw||"").trim(); if(!s)return "";
-  const match=s.match(/(?:src|href)\s*=\s*["']([^"']+)["']/i);
-  return match?match[1]:s;
+const $=id=>document.getElementById(id);let mode="url",file=null;
+const setStatus=(s,bad=false)=>{$("buildStatus").textContent=s;$("buildStatus").style.color=bad?"#ff8585":"#5ee0c1"};
+function iconValue(){let s=$("iconUrl").value.trim();let m=s.match(/src\s*=\s*["']([^"']+)["']/i);return m?m[1]:s}
+function cfg(){return {appName:$("appName").value.trim()||"Aplikasi Saya",appId:$("packageId").value.trim(),version:$("version").value.trim()||"1.0.0",sourceType:mode,websiteUrl:$("websiteUrl").value.trim(),iconUrl:iconValue(),themeColor:$("theme").value,orientation:$("orientation").value,display:$("display").value,backMode:$("backMode").value,authMode:$("authMode").value,deepLinkScheme:$("deepLinkScheme").value.trim()||"web2app"}}
+function preview(){const c=cfg();$("previewName").textContent=c.appName;$("previewId").textContent=c.appId;if(c.iconUrl){$("previewIcon").src=c.iconUrl}else{$("previewIcon").src="data:image/svg+xml,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" rx="22" fill="${c.themeColor}"/><text x="50%" y="58%" text-anchor="middle" font-size="48" fill="white" font-family="Arial">${c.appName.charAt(0).toUpperCase()}</text></svg>`)}}
+document.querySelectorAll("#sourceTabs button").forEach(b=>b.onclick=()=>{document.querySelectorAll("#sourceTabs button").forEach(x=>x.classList.remove("active"));b.classList.add("active");mode=b.dataset.mode;$("urlField").classList.toggle("hidden",mode!=="url");$("fileField").classList.toggle("hidden",mode==="url");$("fileTitle").textContent=mode==="html"?"Pilih index.html":"Pilih arsip ZIP";$("fileHint").textContent=mode==="html"?"HTML tunggal akan dimasukkan ke folder www. Jika memakai CSS/JS/gambar lokal, unggah ZIP agar aset ikut terbawa.":"ZIP harus berisi index.html di root atau di dalam satu folder utama."; $("websiteFile").accept=mode==="html"?".html,.htm":".zip";file=null;$("websiteFile").value=""});
+$("websiteFile").onchange=e=>file=e.target.files[0]||null;
+["appName","packageId","version","iconUrl","websiteUrl","theme","authMode","deepLinkScheme"].forEach(id=>$(id).addEventListener("input",preview));preview();
+function safe(s){return String(s).replace(/[^\w.-]+/g,"-").replace(/^-+|-+$/g,"")||"app"}
+function capacitorConfig(c){return `import type { CapacitorConfig } from '@capacitor/cli';\nconst config: CapacitorConfig = {\n appId: ${JSON.stringify(c.appId)},\n appName: ${JSON.stringify(c.appName)},\n webDir: 'www',\n ${c.sourceType==="url"?`server: { url: ${JSON.stringify(c.websiteUrl)}, cleartext: false },`:""}\n android: { allowMixedContent: false }\n};\nexport default config;\n`}
+function workflow(){return `name: Build Android APK\non:\n  workflow_dispatch:\n  push:\n    branches: [ main ]\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-node@v4\n        with:\n          node-version: 20\n          cache: npm\n      - uses: actions/setup-java@v4\n        with:\n          distribution: temurin\n          java-version: '17'\n      - name: Download launcher icon\n        env:\n          ICON_URL: \${{ vars.APP_ICON_URL }}\n        run: |\n          mkdir -p assets\n          if [ -n "$ICON_URL" ]; then curl -fL "$ICON_URL" -o assets/icon.png; else echo "Set repository variable APP_ICON_URL to a public ImgBB image URL"; exit 1; fi\n      - run: npm install\n      - run: npx cap add android\n      - run: npx capacitor-assets generate --android\n      - run: npx cap sync android\n      - name: Build debug APK\n        run: cd android && chmod +x gradlew && ./gradlew assembleDebug\n      - uses: actions/upload-artifact@v4\n        with:\n          name: android-debug-apk\n          path: android/app/build/outputs/apk/debug/app-debug.apk\n          retention-days: 14\n`}
+async function exportProject(){
+ if(!window.JSZip){setStatus("Library ZIP belum termuat. Periksa koneksi internet lalu coba lagi.",true);return}
+ const c=cfg();
+ if(!/^[a-zA-Z][a-zA-Z0-9_]*(\\.[a-zA-Z][a-zA-Z0-9_]*)+$/.test(c.appId)){setStatus("Package ID tidak valid. Contoh: com.nama.aplikasi",true);return}
+ if(c.sourceType==="url"&&!/^https:\\/\\/.+/i.test(c.websiteUrl)){setStatus("Masukkan URL website HTTPS yang valid.",true);return}
+ if(c.sourceType!=="url"&&!file){setStatus("Pilih file HTML atau ZIP terlebih dahulu.",true);return}
+ if(!c.iconUrl||!/^https?:\\/\\//i.test(c.iconUrl)){setStatus("Masukkan direct URL gambar ImgBB yang valid.",true);return}
+ $("exportBtn").disabled=true;setStatus("Menyiapkan project Capacitor dan workflow build...");
+ try{
+  const zip=new JSZip(),root=zip.folder(safe(c.appName)+"-android");
+  root.file("package.json",JSON.stringify({name:safe(c.appName).toLowerCase(),version:c.version,private:true,scripts:{"build":"echo Web assets ready"},"dependencies":{"@capacitor/android":"^6.2.0","@capacitor/core":"^6.2.0","@capacitor/browser":"^6.2.0","@capacitor/app":"^6.2.0"},"devDependencies":{"@capacitor/cli":"^6.2.0","@capacitor/assets":"^3.0.5"}},null,2));
+  root.file("capacitor.config.ts",capacitorConfig(c));
+  root.file(".gitignore","node_modules/\\nandroid/.gradle/\\nandroid/build/\\n.DS_Store\\n");
+  root.file(".github/workflows/build-android.yml",workflow());
+  root.file("README.md",`# ${c.appName} — Android project\\n\\nProject dibuat dengan Web2App Studio.\\n\\n## Build APK\\n1. Upload isi ZIP ini ke repository GitHub baru.\\n2. Buka Settings → Secrets and variables → Actions → Variables.\\n3. Tambahkan variable APP_ICON_URL dengan direct URL ImgBB ini: ${c.iconUrl}\\n4. Buka tab Actions, jalankan workflow Build Android APK, lalu unduh artifact android-debug-apk setelah selesai.\\n\\n## Dukungan autentikasi\\nMode autentikasi sumber: ${c.authMode}. Skema deep link yang disiapkan: ${c.deepLinkScheme}://auth/callback.\\n\\nEmail/password dan sesi/cookie website umumnya dapat bekerja langsung di WebView. Google, GitHub, dan OAuth lain bergantung pada implementasi login website. Provider harus mengizinkan alur browser eksternal dan redirect kembali ke skema aplikasi. Untuk Firebase Authentication, aktifkan provider terkait di Firebase Console serta daftarkan domain dan OAuth client yang benar. Pembungkus APK tidak dapat otomatis memperbaiki konfigurasi OAuth website.\\n\\n## Catatan\\n- URL website dimuat melalui Capacitor WebView.\\n- ZIP harus memiliki index.html di root atau satu folder utama. HTML tunggal tidak membawa aset lokal terpisah.\\n- APK debug untuk pengujian; distribusi publik memerlukan signing release key.\\n`);
+  if(c.sourceType==="url"){
+   root.folder("www").file("index.html",`<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body><p>Loading ${c.appName}…</p></body></html>`);
+  } else if(c.sourceType==="html"){
+   if(!/\\.html?$/i.test(file.name))throw new Error("File yang dipilih bukan HTML.");
+   root.folder("www").file("index.html",file);
+  } else {
+   const input=await JSZip.loadAsync(file),entries=Object.keys(input.files);
+   let base="";
+   if(!input.file("index.html")){const found=entries.find(x=>/^[^/]+\\/index\\.html$/i.test(x));if(found)base=found.split("/")[0]+"/";}
+   if(!input.file(base+"index.html"))throw new Error("index.html tidak ditemukan di root ZIP atau satu folder utama.");
+   const www=root.folder("www");
+   for(const name of entries){const item=input.files[name];if(item.dir||!name.startsWith(base))continue;const rel=name.slice(base.length);if(rel)www.file(rel,await item.async("uint8array"));}
+  }
+  root.file("assets/README.txt","Workflow akan mengunduh ikon dari APP_ICON_URL dan membuat resource launcher Android.");
+  const blob=await zip.generateAsync({type:"blob",compression:"DEFLATE",compressionOptions:{level:6}});
+  const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=safe(c.appName)+"-android-project.zip";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),30000);
+  setStatus("Project berhasil disiapkan. Workflow cloud akan membangun APK setelah project diunggah ke GitHub.");
+ }catch(e){setStatus("Gagal menyiapkan project: "+e.message,true)}
+ finally{$("exportBtn").disabled=false}
 }
-function updatePreview(){
-  const name=$("appName").value.trim()||"Aplikasi Saya";
-  const version=$("appVersion").value.trim()||"1.0.0";
-  const icon=extractImgUrl($("iconInput").value);
-  $("phoneName").textContent=name; $("phoneVersion").textContent="Versi "+version;
-  $("phoneSource").textContent=mode==="url"?($("siteUrl").value||"Website kamu"):(selectedFile?.name||"File website");
-  if(icon){$("iconPreview").src=icon;$("phoneIcon").src=icon;}
-  else {$("phoneIcon").src=$("iconPreview").src;}
-}
-document.querySelectorAll(".tab").forEach(btn=>btn.addEventListener("click",()=>{
-  document.querySelectorAll(".tab").forEach(b=>b.classList.remove("active"));btn.classList.add("active");mode=btn.dataset.mode;
-  $("urlSource").classList.toggle("hidden",mode!=="url");$("fileSource").classList.toggle("hidden",mode==="url");
-  $("fileLabel").textContent=mode==="html"?"Pilih index.html":"Pilih ZIP website";
-  $("fileHint").textContent=mode==="html"?"Pilih satu file HTML. Aset eksternal perlu tetap dapat diakses.":"Pastikan index.html berada di root ZIP, bukan di dalam subfolder.";
-  $("siteFile").accept=mode==="html"?".html,.htm":".zip";selectedFile=null;$("siteFile").value="";updatePreview();
-}));
-$("siteFile").addEventListener("change",e=>{selectedFile=e.target.files[0]||null;updatePreview();});
-["appName","appVersion","siteUrl","iconInput"].forEach(id=>$(id).addEventListener("input",updatePreview));
-$("iconInput").addEventListener("change",updatePreview);
-$("previewBtn").addEventListener("click",()=>{updatePreview();status("Preview berhasil diperbarui.");});
-$("buildBtn").addEventListener("click",async()=>{
-  const endpoint=$("buildEndpoint").value.trim();
-  if(!endpoint){status("Isi Build API endpoint terlebih dahulu. Backend diperlukan untuk membuat APK/AAB.",true);return;}
-  if(mode==="url"&&!/^https:\/\/.+/i.test($("siteUrl").value.trim())){status("Masukkan URL website HTTPS yang valid.",true);return;}
-  if(mode!=="url"&&!selectedFile){status("Pilih file website terlebih dahulu.",true);return;}
-  const pkg=$("packageName").value.trim();
-  if(!/^[a-zA-Z][a-zA-Z0-9_]*(\.[a-zA-Z][a-zA-Z0-9_]*)+$/.test(pkg)){status("Package name tidak valid. Contoh: com.nama.aplikasi",true);return;}
-  const data=new FormData();
-  data.append("sourceType",mode);data.append("appName",$("appName").value.trim());data.append("packageName",pkg);
-  data.append("version",$("appVersion").value.trim());data.append("iconUrl",extractImgUrl($("iconInput").value));
-  data.append("orientation",$("orientation").value);data.append("displayMode",$("displayMode").value);data.append("themeColor",$("themeColor").value);
-  if(mode==="url")data.append("websiteUrl",$("siteUrl").value.trim());else data.append("websiteFile",selectedFile);
-  $("buildBtn").disabled=true;status("Mengirim konfigurasi ke server build...");
-  try{
-    const response=await fetch(endpoint,{method:"POST",body:data});
-    if(!response.ok)throw new Error("Server build merespons HTTP "+response.status);
-    const result=await response.json();
-    const download=result.downloadUrl||result.apkUrl||result.url;
-    if(!download)throw new Error("Build API belum mengembalikan downloadUrl.");
-    status("Build selesai. Membuka tautan hasil...");
-    const a=document.createElement("a");a.href=download;a.target="_blank";a.rel="noopener";a.click();
-  }catch(err){status("Build gagal: "+err.message+". Periksa endpoint, CORS, dan format respons backend.",true);}
-  finally{$("buildBtn").disabled=false;}
-});
+$("exportBtn").onclick=exportProject;
+$("configBtn").onclick=()=>{const blob=new Blob([JSON.stringify(cfg(),null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="web2app-config.json";a.click();URL.revokeObjectURL(a.href);setStatus("Konfigurasi JSON berhasil diunduh.")};
 
-$("initFirebase").addEventListener("click",()=>{
-  try{
-    const config={apiKey:$("fbApiKey").value.trim(),authDomain:$("fbAuthDomain").value.trim(),projectId:$("fbProjectId").value.trim(),appId:$("fbAppId").value.trim()};
-    if(Object.values(config).some(v=>!v))throw new Error("Lengkapi semua field konfigurasi Firebase.");
-    const app=initializeApp(config);auth=getAuth(app);
-    onAuthStateChanged(auth,user=>{if(user){authStatus("Masuk sebagai "+(user.email||user.displayName||user.uid));$("logoutBtn").classList.remove("hidden");}else{$("logoutBtn").classList.add("hidden");authStatus("Belum login.");}});
-    authStatus("Firebase berhasil dihubungkan.");
-  }catch(e){authStatus(e.message,true);}
-});
-$("googleLogin").addEventListener("click",async()=>{if(!auth)return authStatus("Hubungkan Firebase terlebih dahulu.",true);try{await signInWithPopup(auth,new GoogleAuthProvider());}catch(e){authStatus(e.message,true);}});
-$("githubLogin").addEventListener("click",async()=>{if(!auth)return authStatus("Hubungkan Firebase terlebih dahulu.",true);try{await signInWithPopup(auth,new GithubAuthProvider());}catch(e){authStatus(e.message,true);}});
-$("emailRegister").addEventListener("click",async()=>{if(!auth)return authStatus("Hubungkan Firebase terlebih dahulu.",true);try{await createUserWithEmailAndPassword(auth,$("authEmail").value,$("authPassword").value); }catch(e){authStatus(e.message,true);}});
-$("emailLogin").addEventListener("click",async()=>{if(!auth)return authStatus("Hubungkan Firebase terlebih dahulu.",true);try{await signInWithEmailAndPassword(auth,$("authEmail").value,$("authPassword").value);}catch(e){authStatus(e.message,true);}});
-$("logoutBtn").addEventListener("click",async()=>{try{await signOut(auth);}catch(e){authStatus(e.message,true);}});
-updatePreview();
-</script>
-</body>
-</html>
+</script>\n</body>\n</html>\n
